@@ -15,17 +15,16 @@ class _ButtonWidgetState extends State<ButtonWidget> {
   Widget build(BuildContext context) {
     return TextButton(
       style: TextButton.styleFrom(
-        backgroundColor: Colors.black,
+        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(8)),
-          side: BorderSide(
-            color: Colors.black,
-            width: 1,
-          ),
         ),
       ),
       onPressed: widget.onPressed,
-      child: Text(widget.text),
+      child: Text(
+        widget.text,
+        style: const TextStyle(color: Colors.black),
+      ),
     );
   }
 }

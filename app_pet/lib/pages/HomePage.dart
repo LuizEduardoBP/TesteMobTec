@@ -1,3 +1,4 @@
+import 'package:app_pet/pages/PetPage.dart';
 import 'package:app_pet/widgets/button.dart';
 import 'package:flutter/material.dart';
 
@@ -15,19 +16,35 @@ class Homepage extends StatelessWidget {
         ButtonWidget(
           text: "Clinica São Carlos",
           onPressed: () {
-            print("C");
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) =>
+                        Petpage(title: "Clinica São Carlos")));
           },
+        ),
+        const SizedBox(
+          height: 20,
         ),
         ButtonWidget(
           text: "Petshop Patinhas",
           onPressed: () {
-            print("P");
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Petpage(title: "Petshop Patinhas")));
           },
+        ),
+        const SizedBox(
+          height: 20,
         ),
         ButtonWidget(
           text: "Casa do Animal",
           onPressed: () {
-            print("A");
+            Navigator.push(
+                context,
+                MaterialPageRoute(
+                    builder: (context) => Petpage(title: "Casa do Animal")));
           },
         ),
       ],
